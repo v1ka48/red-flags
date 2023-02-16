@@ -1,0 +1,16 @@
+{
+  "greenFlags" : [
+    "Likes dogs",
+    "Loves sunset walks",
+    "Millionaire",
+    "Volunteers",
+    "Doctor"
+  ],
+  "redFlags" : [
+    "Hates his mom",
+    "Doesn't like kids",
+    "Has a girl best friend",
+    "Still talks to his ex",
+    "Makes grammar mistakes"
+  ]
+}
