@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text,  TouchableOpacity } from 'react-native';
 import feedback from '../data/feedback.json';
 
 function getRandomFeedback() {

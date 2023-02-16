@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { Button } from '@rneui/themed';
 import flags from '../data/flags.json';
@@ -11,23 +11,37 @@ function getRandomRedFlag() {
   return Math.floor(Math.random() * flags.redFlags.length);
 }
 
-const CardScreen = ({ navigation }) => {
-  let greenFlagOne = flags.greenFlags[getRandomGreenFlag()]
-  let greenFlagTwo = flags.greenFlags[getRandomGreenFlag()]
-  while (greenFlagOne == greenFlagTwo) {
-    greenFlagTwo = flags.greenFlags[getRandomGreenFlag()];
+function getRandomFlags() {
+  let traits = [
+    flags.greenFlags[getRandomGreenFlag()],
+    flags.greenFlags[getRandomGreenFlag()],
+    flags.redFlags[getRandomRedFlag()]
+  ]
+  while (traits[0] == traits[1]) {
+    traits[0] = flags.greenFlags[getRandomGreenFlag()];
   }
-  let redFlag = flags.redFlags[getRandomRedFlag()]
+  return traits;
+}
+
+const CardScreen = ({ navigation }) => {
+  const [flags, setFlags] = useState(getRandomFlags());
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      setFlags(getRandomFlags());
+    });
+    return unsubscribe;
+    }, [navigation]
+  );
   return (
     <View style={styles.container}>
       <Text style={styles.greenFlag}>
-        {greenFlagOne}
+        {flags[0]}
       </Text>
       <Text style={styles.greenFlag}>
-        {greenFlagTwo}
+        {flags[1]}
       </Text>
       <Text style={styles.redFlag}>
-        {redFlag}
+        {flags[2]}
       </Text>
       <View style={{ height: 350 }}/>
       <View style={styles.buttonContainer}>

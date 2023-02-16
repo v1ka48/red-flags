@@ -28,7 +28,7 @@ const HomeScreen = ({ navigation }) => {
       />
       <Button
         title="INSTRUCTIONS"
-        onPress={() => navigation.navigate("Instructions")}
+        onPress={() => navigation.navigate("INSTRUCTIONS")}
         buttonStyle={{
           height: 60,
           backgroundColor: "#CC0033",

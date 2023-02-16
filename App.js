@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import InstructionsScreen from './screens/InstructionsScreen';
@@ -20,8 +19,8 @@ export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={globalScreenOptions}>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Instructions" component={InstructionsScreen} />
+          <Stack.Screen name="HOME" options={{headerShown: false}} component={HomeScreen} />
+          <Stack.Screen name="INSTRUCTIONS" component={InstructionsScreen} />
           <Stack.Screen name="RED FLAGS" component={CardScreen} />
           <Stack.Screen name="FeedbackToNo" options={{headerShown: false}} component={NoFeedbackScreen} />
           <Stack.Screen name="FeedbackToYes" options={{headerShown: false}} component={YesFeedbackScreen} />
