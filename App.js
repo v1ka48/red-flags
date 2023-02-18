@@ -6,8 +6,9 @@ import InstructionsScreen from './screens/InstructionsScreen';
 import CardScreen from './screens/CardScreen';
 import YesFeedbackScreen from './screens/YesFeedbackScreen';
 import NoFeedbackScreen from './screens/NoFeedbackScreen';
+import ShotScreen from './screens/ShotScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const globalScreenOptions = {
   headerStyle: { backgroundColor: "#CC0033" },
@@ -24,6 +25,7 @@ export default function App() {
           <Stack.Screen name="RED FLAGS" component={CardScreen} />
           <Stack.Screen name="FeedbackToNo" options={{headerShown: false}} component={NoFeedbackScreen} />
           <Stack.Screen name="FeedbackToYes" options={{headerShown: false}} component={YesFeedbackScreen} />
+          <Stack.Screen name="TakeAShot" options={{headerShown: false}} component={ShotScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );

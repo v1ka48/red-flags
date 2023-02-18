@@ -25,6 +25,7 @@ function getRandomFlags() {
 
 const CardScreen = ({ navigation }) => {
   const [flags, setFlags] = useState(getRandomFlags());
+  const [answerNo, setAnswerNo] = useState(0);
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       setFlags(getRandomFlags());
@@ -47,7 +48,15 @@ const CardScreen = ({ navigation }) => {
       <View style={styles.buttonContainer}>
         <Button
           title="NO"
-          onPress={() => navigation.navigate("FeedbackToNo")}
+          onPress={() => {
+            setAnswerNo(answerNo + 1);
+            if (answerNo === 3) {
+              setAnswerNo(0);
+              navigation.navigate("TakeAShot");
+            } else {
+            navigation.navigate("FeedbackToNo");
+            }
+          }}
           buttonStyle={{
             height: 90,
             backgroundColor: 'white',
@@ -61,7 +70,10 @@ const CardScreen = ({ navigation }) => {
         />
         <Button
           title="YES"
-          onPress={() => navigation.navigate("FeedbackToYes")}
+          onPress={() => {
+            setAnswerNo(0);
+            navigation.navigate("FeedbackToYes")
+          }}
           buttonStyle={{
             height: 90,
             backgroundColor: "#CC0033",
