@@ -8,7 +8,7 @@ import YesFeedbackScreen from './screens/YesFeedbackScreen';
 import NoFeedbackScreen from './screens/NoFeedbackScreen';
 import ShotScreen from './screens/ShotScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const globalScreenOptions = {
   headerStyle: { backgroundColor: "#CC0033" },
