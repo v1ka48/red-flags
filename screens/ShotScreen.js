@@ -24,15 +24,16 @@ export default ShotScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#161616",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
   },
   feedback: {
-    color: "#CC0033",
+    color: "#fefffe",
     fontSize: 40, 
     fontWeight: "bold",
+    marginHorizontal: 25,
   }
 });

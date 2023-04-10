@@ -1,43 +1,44 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text} from 'react-native';
 import { Button } from '@rneui/themed';
 import { StatusBar } from 'expo-status-bar';
+import Logo from '../assets/RedFlag.svg'
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <StatusBar style="light" />
-      <Text style={styles.logoName} >
-        RED FLAGS
-      </Text>
+      <StatusBar style="dark" />
+      <Logo width={600} marginLeft={220}  />
       <Button
         title="START GAME"
         onPress={() => navigation.navigate("RED FLAGS")}
         buttonStyle={{
           height: 60,
-          backgroundColor: 'white',
+          backgroundColor: "#de2e1e",
           borderWidth: 2,
-          borderColor: 'black',
+          borderColor: '#161616',
           borderRadius: 30,
         }}
-        containerStyle={{
+        containerStyle={{ 
           width: 220,
           marginBottom: 20,
         }}
-        titleStyle={{ fontWeight: 'bold', color: "black" }}
+        titleStyle={{ fontWeight: 'bold', color: "#161616" }}
       />
       <Button
         title="INSTRUCTIONS"
         onPress={() => navigation.navigate("INSTRUCTIONS")}
         buttonStyle={{
           height: 60,
-          backgroundColor: "#CC0033",
+          backgroundColor: '#161616',
           borderWidth: 2,
-          borderColor: 'white',
+          borderColor: '#de2e1e',
           borderRadius: 30,
         }}
-        containerStyle={{ width: 220 }}
-        titleStyle={{ fontWeight: 'bold' }}
+        containerStyle={{
+          width: 220,
+        }}
+        titleStyle={{ fontWeight: 'bold', color: "#de2e1e" }}
       />
     </View>
   );
@@ -47,16 +48,10 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#161616",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
-  },
-  logoName: {
-    marginBottom: 50,
-    color: "#CC0033",
-    fontSize: 50, 
-    fontWeight: "bold",
   },
 });
