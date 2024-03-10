@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -7,25 +8,25 @@ import CardScreen from './screens/CardScreen';
 import YesFeedbackScreen from './screens/YesFeedbackScreen';
 import NoFeedbackScreen from './screens/NoFeedbackScreen';
 import ShotScreen from './screens/ShotScreen';
+import PreferenceScreen from './screens/PreferenceScreen';
 
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: "#CC0033" },
-  headerTitleStyle: { color: "white" },
-  headerTintColor: "white",
+  headerShown: false,
 }
 
 export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={globalScreenOptions}>
-          <Stack.Screen name="HOME" options={{headerShown: false}} component={HomeScreen} />
+          <Stack.Screen name="HOME" component={HomeScreen} />
+          <Stack.Screen name="Preference" component={PreferenceScreen} />
           <Stack.Screen name="INSTRUCTIONS" component={InstructionsScreen} />
-          <Stack.Screen name="RED FLAGS" component={CardScreen} />
-          <Stack.Screen name="FeedbackToNo" options={{headerShown: false}} component={NoFeedbackScreen} />
-          <Stack.Screen name="FeedbackToYes" options={{headerShown: false}} component={YesFeedbackScreen} />
-          <Stack.Screen name="TakeAShot" options={{headerShown: false}} component={ShotScreen} />
+          <Stack.Screen name="RED FLAGS" options={{headerShown: true}} component={CardScreen} />
+          <Stack.Screen name="FeedbackToNo" component={NoFeedbackScreen} />
+          <Stack.Screen name="FeedbackToYes" component={YesFeedbackScreen} />
+          <Stack.Screen name="TakeAShot" component={ShotScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );

@@ -41,16 +41,17 @@ export default NoFeedbackScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#161616",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
   },
   feedback: {
-    color: "#CC0033",
-    fontSize: 40, 
+    color: "#fefffe",
+    fontSize: 50, 
     fontWeight: "bold",
+    marginHorizontal: 25,
   }
 });
 =======

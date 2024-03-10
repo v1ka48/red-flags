@@ -68,7 +68,7 @@ const CardScreen = ({ navigation }) => {
       <Text style={styles.greenFlag}>
         {flags[0]}
       </Text>
-      <Text style={styles.greenFlag}>
+      <Text style={styles.greenFlag2}>
         {flags[1]}
       </Text>
       <Text style={styles.redFlag}>
@@ -89,14 +89,14 @@ const CardScreen = ({ navigation }) => {
           }}
           buttonStyle={{
             height: 90,
-            backgroundColor: 'white',
+            backgroundColor: '#de2e1e',
             borderWidth: 2,
-            borderColor: '#CC0033',
-            borderWidth: 3,
+            borderColor: '#de2e1e',
+            borderWidth: 5,
             borderRadius: 60,
           }}
           containerStyle={{ width: 90, marginLeft: 10, marginRight: 210 }}
-          titleStyle={{ fontWeight: 'bold', color: "#CC0033" }}
+          titleStyle={{ fontWeight: '600', color: "#fefffe" }}
         />
         <Button
           title="YES"
@@ -106,9 +106,9 @@ const CardScreen = ({ navigation }) => {
           }}
           buttonStyle={{
             height: 90,
-            backgroundColor: "#CC0033",
+            backgroundColor: "#de2e1e",
             borderWidth: 2,
-            borderColor: '#CC0033',
+            borderColor: '#de2e1e',
             borderRadius: 60,
           }}
           containerStyle={{ width: 90 }}
@@ -124,12 +124,19 @@ export default CardScreen
 <<<<<<< Updated upstream
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#161616",
     flex: 1,
     padding: 10,
   },
   greenFlag: {
-    color: "black",
+    marginTop: 50,
+    color: "#fefffe",
+    fontSize: 40,
+    padding: 10,
+    fontWeight: "bold"
+  },
+  greenFlag2: {
+    color: "#fefffe",
     fontSize: 40,
     padding: 10,
     fontWeight: "bold"
@@ -138,7 +145,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     padding: 10,
     fontWeight: "bold",
-    color: "#CC0033"
+    color: "#de2e1e"
   },
   buttonContainer: {
     flexDirection: "row",
