@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
-  },
+  }
 });
 
 const HomeScreen = ({ navigation }) => {
@@ -53,24 +53,4 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-<<<<<<< Updated upstream
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#161616",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 10,
-  },
-  logoName: {
-    marginBottom: 50,
-    color: "#CC0033",
-    fontSize: 50, 
-    fontWeight: "bold",
-  },
-});
-=======
-export default HomeScreen;
->>>>>>> Stashed changes
