@@ -1,32 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native'
 import React from 'react'
+import Logo from'../assets/GamePlay.svg'
 
 const InstructionScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>
-        How to Play
-      </Text>
-      <Text style={styles.paragraph}>
-        Can be played by two or more people.
-        Rules are simple: 
-      </Text>
-      <Text style={styles.paragraph}>
-        The player who holds the
-        phone is single, and they need to
-        choose one person who they would go
-        on a date with.
-      </Text>
-      <Text style={styles.paragraph}>
-        If the player can not justify their choice or 
-        picked NO three times in a row - they have to
-        take a shot. 
-      </Text>
-      <Text style={styles.paragraph}>
-        The player then passes the phone to the person
-        of their choice. 
-      </Text>
-    </View>
+    <TouchableWithoutFeedback  onPress={() => navigation.goBack()}>
+      <View style={styles.container}>
+        <Logo width={600} marginLeft={10}/>
+        <Text style={styles.title}>
+          RULES
+        </Text>
+        <Text style={styles.paragraph}>
+          Rule 
+        </Text>
+        <Text style={[styles.title, styles.catch]}>
+          THE CATCH
+        </Text>
+        <Text style={[styles.paragraph, styles.spacing]}>
+          After three swipes left the player has to take  a shot  
+        </Text>
+      </View>
+    </TouchableWithoutFeedback>
   )
 }
 
@@ -34,23 +28,30 @@ export default InstructionScreen
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#161616",
     flex: 1,
-    alignItems: "center",
+    alignItems: "left",
     justifyContent: "center",
     padding: 10,
   },
-  heading: {
-    marginBottom: 30,
-    color: "#CC0033",
-    fontSize: 30, 
+  title: {
+    color: "#fefffe",
+    fontSize: 20, 
     fontWeight: "bold",
+    paddingHorizontal: 30
   },
   paragraph: {
     textAlign: 'justify',
+    color: "#fefffe",
     marginBottom: 10,
-    fontSize: 25, 
+    fontSize: 20, 
     fontWeight: "bold",
-    paddingHorizontal: 30
+    paddingHorizontal: 30,
+  },
+  catch: {
+    color: '#de2e1e',
+  },
+  spacing: {
+    marginBottom: 300,
   }
 })
