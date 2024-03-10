@@ -3,6 +3,36 @@ import { StyleSheet, View, Text } from 'react-native';
 import { Button } from '@rneui/themed';
 import flags from '../data/flags.json';
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#161616",
+    flex: 1,
+    padding: 10,
+  },
+  greenFlag: {
+    marginTop: 50,
+    color: "#fefffe",
+    fontSize: 40,
+    padding: 10,
+    fontWeight: "bold"
+  },
+  greenFlag2: {
+    color: "#fefffe",
+    fontSize: 40,
+    padding: 10,
+    fontWeight: "bold"
+  },
+  redFlag: {
+    fontSize: 40,
+    padding: 10,
+    fontWeight: "bold",
+    color: "#de2e1e"
+  },
+  buttonContainer: {
+    flexDirection: "row",
+  }
+})
+
 function getRandomGreenFlag() {
   return Math.floor(Math.random() * flags.greenFlags.length);
 }
@@ -91,6 +121,7 @@ const CardScreen = ({ navigation }) => {
 
 export default CardScreen
 
+<<<<<<< Updated upstream
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
@@ -113,3 +144,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   }
 })
+=======
+>>>>>>> Stashed changes

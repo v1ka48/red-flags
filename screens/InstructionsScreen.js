@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
+<<<<<<< Updated upstream
 const InstructionScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -32,6 +33,8 @@ const InstructionScreen = ({ navigation }) => {
 
 export default InstructionScreen
 
+=======
+>>>>>>> Stashed changes
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
@@ -54,3 +57,27 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30
   }
 })
+
+const InstructionScreen = ({ navigation }) => {
+  return (
+    <TouchableWithoutFeedback  onPress={() => navigation.goBack()}>
+      <View style={styles.container}>
+        <Logo width={600} marginLeft={10}/>
+        <Text style={styles.title}>
+          RULES
+        </Text>
+        <Text style={styles.paragraph}>
+          Rule 
+        </Text>
+        <Text style={[styles.title, styles.catch]}>
+          THE CATCH
+        </Text>
+        <Text style={[styles.paragraph, styles.spacing]}>
+          After three swipes left the player has to take  a shot  
+        </Text>
+      </View>
+    </TouchableWithoutFeedback>
+  )
+}
+
+export default InstructionScreen;

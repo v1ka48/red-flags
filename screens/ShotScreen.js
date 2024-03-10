@@ -6,6 +6,22 @@ function getRandomFeedback() {
   return Math.floor(Math.random() * feedback.takeShot.length);
 }
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#161616",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 10,
+  },
+  feedback: {
+    color: "#fefffe",
+    fontSize: 40, 
+    fontWeight: "bold",
+    marginHorizontal: 25,
+  }
+});
+
 const ShotScreen = ({ navigation }) => {
   let takeAshot = feedback.takeShot[getRandomFeedback()]
   return (
@@ -21,6 +37,7 @@ const ShotScreen = ({ navigation }) => {
 }
 
 export default ShotScreen;
+<<<<<<< Updated upstream
 
 const styles = StyleSheet.create({
   container: {
@@ -36,3 +53,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   }
 });
+=======
+>>>>>>> Stashed changes

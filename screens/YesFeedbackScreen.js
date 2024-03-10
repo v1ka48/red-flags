@@ -6,22 +6,6 @@ function getRandomFeedback() {
   return Math.floor(Math.random() * feedback.answerYes.length);
 }
 
-const YesFeedbackScreen = ({ navigation }) => {
-  let feedbackToYes = feedback.answerYes[getRandomFeedback()]
-  return (
-    <TouchableOpacity 
-    style={styles.container}
-    onPress={() => navigation.navigate("RED FLAGS")}
-    >
-      <Text style={styles.feedback}>
-        {feedbackToYes}
-      </Text>
-    </TouchableOpacity>
-  )
-}
-
-export default YesFeedbackScreen;
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
@@ -36,3 +20,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   }
 });
+
+const YesFeedbackScreen = ({ navigation }) => {
+  let feedbackToYes = feedback.answerYes[getRandomFeedback()]
+  return (
+    <TouchableOpacity 
+    style={styles.container}
+    onPress={() => navigation.navigate("RED FLAGS")}
+    >
+      <Text style={styles.feedback}>
+        {feedbackToYes}
+      </Text>
+    </TouchableOpacity>
+  )
+}
+
+export default YesFeedbackScreen

@@ -3,6 +3,16 @@ import { StyleSheet, View, Text } from 'react-native';
 import { Button } from '@rneui/themed';
 import { StatusBar } from 'expo-status-bar';
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#161616",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 10,
+  },
+});
+
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -43,6 +53,7 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
+<<<<<<< Updated upstream
 export default HomeScreen;
 
 const styles = StyleSheet.create({
@@ -60,3 +71,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+=======
+export default HomeScreen;
+>>>>>>> Stashed changes
